@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+    <div class="container">
+        <div class="row">
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Intitule</th>
+                        <th>Description</th>
+                        <th>Visualiser</th>
+                    </tr>
+                </thead>
+                <tbody>         
+                    {% for offreEmploi in listeOffresEmploi %}
+                        <tr>
+                            <td>{{offreEmploi.id}}</td>
+                            <td>{{offreEmploi.intitule}}</td>
+                            <td>{{offreEmploi.descriptif}}</td>
+                            <td><button type = "button" class = "btn btn-default btn-sm" onclick="visualiserOffre({{offreEmploi.id}})"><span class="glyphicon glyphicon-search"></span></button></td>
+                        </tr>
+                    {% endfor%}
+                </tbody>
+        </div>  
+    </div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Visualisation offre</h4>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock%}
+
