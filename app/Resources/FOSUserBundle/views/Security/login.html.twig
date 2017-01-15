@@ -7,27 +7,56 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6 center">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4 center aidu-fond-blanc">
+            <img class="img-responsive center" src="{{ asset('images/logo.jpg') }}">
+            <div class="h2 center">
+                    Connectez-vous
+                </div>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4 center aidu-fond-blanc">
 <form action="{{ path("fos_user_security_check") }}" method="post">
     
     <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
 <div class="form-group">
-    <label for="username">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+    <label class="control-label" for="username">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}</label>
+    <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" required="required" placeholder="Saisissez votre identifiant"/>
 </div>
 <div class="form-group">
-    <label for="password">{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}</label>
-    <input type="password" id="password" name="_password" required="required" />
+    <label class="control-label" for="password">{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}</label>
+    <input class="form-control" type="password" id="password" name="_password" required="required" placeholder="Saisissez votre mot de passe"/>
 </div>
     <div class="form-group">
-    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-    <label for="remember_me">{{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}</label>
+    <input  type="checkbox" id="remember_me" name="_remember_me" value="on" />
+    <label class="control-label" for="remember_me">{{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}</label>
     </div>
     
     <input class="btn btn-success" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" />
     
 </form>
     </div>
+    <div class="col-md-4">
+        </div>
 </div>
+    <div class="row">
+        <div class="col-md-4">
+            
+        </div>
+        <div class="col-md-4 center aidu-fond-blanc">
+            <div>
+                Vous n'avez pas encore de compte ? <a href="{{ path('fos_user_registration_register') }}">Inscrivez-vous.</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            
+        </div>
+    </div>
 </div>
 {% endblock fos_user_content %}
