@@ -21,6 +21,11 @@ class Utilisateur extends BaseUser
      /**
      * @ORM\Column(type="string",nullable=true)
      */
+    private $civilite;
+    
+     /**
+     * @ORM\Column(type="string",nullable=true)
+     */
     private $nom;
     
      /**
@@ -34,7 +39,15 @@ class Utilisateur extends BaseUser
         // your own logic
     }
     
-    public function getNom(){
+    public function getCivilite(){
+        return $this->civilite;
+    }
+    
+    public function setCivilite($civilite){
+        $this->civilite=$civilite;
+    }
+
+        public function getNom(){
         return $this->nom;
     }
     

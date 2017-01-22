@@ -1,9 +1,38 @@
 {% extends "FOSUserBundle::layout.html.twig" %}
 
 {% block fos_user_content %}
-    <p>{{ 'registration.confirmed'|trans({'%username%': user.username}, 'FOSUserBundle') }}</p>
-    {% if app.session is not empty %}
-        {% set targetUrl = app.session.get('_security.' ~ app.security.token.providerKey ~ '.target_path') %}
-        {% if targetUrl is not empty %}<p><a href="{{ targetUrl }}">{{ 'registration.back'|trans({}, 'FOSUserBundle') }}</a></p>{% endif %}
-    {% endif %}
+
+    <div class="row aidu-mgt20">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-1  aidu-fond-blanc-hight-fixed aidu-pdt15">
+             <img class="img-responsive center-block" height="75" width="75" src="{{asset('images/coche-verte.png')}}"> 
+        </div>
+        <div class="col-md-3 aidu-fond-blanc-hight-fixed">
+           <p class="h3">Confirmation de votre compte.</p>
+            <p>{{ 'registration.confirmed'|trans({'%username%': user.username}, 'FOSUserBundle') }}</span>
+            {% if app.session is not empty %}
+                {% set targetUrl = app.session.get('_security.' ~ app.security.token.providerKey ~ '.target_path') %}
+                {% if targetUrl is not empty %}<p><a href="{{ targetUrl }}">{{ 'registration.back'|trans({}, 'FOSUserBundle') }}</a></p>{% endif %}
+                {% endif %}
+        
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+    {#<div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4 text-center aidu-fond-blanc aidu-pdb15">
+
+            <p>{{ 'registration.confirmed'|trans({'%username%': user.username}, 'FOSUserBundle') }}</p>
+            {% if app.session is not empty %}
+                {% set targetUrl = app.session.get('_security.' ~ app.security.token.providerKey ~ '.target_path') %}
+                {% if targetUrl is not empty %}<p><a href="{{ targetUrl }}">{{ 'registration.back'|trans({}, 'FOSUserBundle') }}</a></p>{% endif %}
+                {% endif %}
+        </div>
+        <div class="col-md-4">
+        </div
+    </div>
+</div>#}
 {% endblock fos_user_content %}

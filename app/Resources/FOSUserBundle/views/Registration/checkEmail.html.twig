@@ -1,5 +1,14 @@
 {% extends "FOSUserBundle::layout.html.twig" %}
 
 {% block fos_user_content %}
+    <div class="row aidu-mgt20">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4 aidu-fond-blanc aidu-mgt20">
     <p>{{ 'registration.check_email'|trans({'%email%': user.email}, 'FOSUserBundle') }}</p>
+        </div>
+        <div class="col-md-4">
+        </div>
+    
+    </div>
 {% endblock fos_user_content %}

@@ -4,39 +4,39 @@
 {% block fos_user_content %}
     <div class="container">
         <div class="row">
-        <div class="col-md-4">
-        </div>
-        <div class="col-md-4  aidu-fond-blanc">
-            <img class="img-responsive center-block" src="{{ asset('images/logo.jpg') }}">
-            <div class="h2 text-center">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4  aidu-fond-blanc aidu-pdt15">
+                <img class="img-responsive center-block" src="{{ asset('images/logo.jpg') }}">
+                <div class="h2 text-center">
                     Inscrivez-vous
                 </div>
-        </div>
-        <div class="col-md-4">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-        </div>
-        <div class="col-md-4 center aidu-fond-blanc">
-{% include "FOSUserBundle:Registration:register_content.html.twig" %}
-  </div>
-  <div class="col-md-4">
-        </div>
-    </div>
-  <div class="row">
-        <div class="col-md-4">
-            
-        </div>
-        <div class="col-md-4 center aidu-fond-blanc">
-            <div>
-                Vous avez un compte ? <a href="{{ path('fos_user_security_login') }}">Connectez-vous.</a>
+            </div>
+            <div class="col-md-4">
             </div>
         </div>
-        <div class="col-md-4">
-            
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4 center aidu-fond-blanc">
+                {% include "FOSUserBundle:Registration:register_content.html.twig" %}
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4 center aidu-fond-blanc aidu-pdb15">
+                <div>
+                    Vous avez un compte ? <a href="{{ path('fos_user_security_login') }}">Connectez-vous.</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+
+            </div>
         </div>
     </div>
-</div>
 {% endblock fos_user_content %}
-      
+

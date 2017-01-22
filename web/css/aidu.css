@@ -9,11 +9,32 @@ and open the template in the editor.
 */
 body {
   background: #e5e6e8;
-  color: #555;
+  color: #333;
 }
 
 .aidu-fond-blanc{
     background: #FFFFFF !important ;
-    padding-bottom: 20px;
-    padding-top: 20px
+    
+}
+
+.aidu-fond-blanc-hight-fixed{
+    background: #FFFFFF !important ;
+    height: 100px;
+    
+}
+
+.aidu-mgt20 {
+    margin-top: 20px; 
+}
+
+.aidu-mgl15 {
+    margin-left: 15px; 
+}
+
+.aidu-pdt15 {
+    padding-top: 15px;
+}
+
+.aidu-pdb15 {
+    padding-bottom: 15px;
 }
