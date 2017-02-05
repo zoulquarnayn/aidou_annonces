@@ -10,12 +10,31 @@
         <link rel="stylesheet" href="{{ asset('css/aidu.css') }}" />
     </head>
     <body>
-                
+        <div class="container-fluid">
+            <div class="row aidu-fond-blanc aidu-mgb20">
+                <div class="col-md-4">
+                    <img class="img-responsive" src="{{ asset('images/logo.jpg') }}">
+                </div>
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+            
+        </div>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
 		<script src="{{ asset('js/jquery-3.1.1.js') }}"></script>
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
         <script src="{{ asset('js/aidou_annonces.js') }}"></script>
+        
+        <div class="footer navbar-fixed-bottom aidu-mgt20">
+            <div class="row aidu-footer">
+                <div class="col-md-12">
+                    Pied de page
+                </div>
+            </div>
+        </div>
     </body>
 </html>

@@ -12,6 +12,15 @@ body {
   color: #333;
 }
 
+.aidu-header{
+    height: 50px;
+}
+
+.aidu-footer{
+    background: #000000 !important ;
+    color: #FFFFFF;
+}
+
 .aidu-fond-blanc{
     background: #FFFFFF !important ;
     
@@ -26,6 +35,11 @@ body {
 .aidu-mgt20 {
     margin-top: 20px; 
 }
+
+.aidu-mgb20 {
+    margin-bottom: 20px; 
+}
+
 
 .aidu-mgl15 {
     margin-left: 15px; 

@@ -4,6 +4,7 @@
 
 namespace AppBundle\Form;
 
+use AppBundle\Listener\RegistrationListener;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -11,6 +12,21 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 class RegistrationType extends AbstractType {
 
     public function buildForm(FormBuilderInterface $builder, array $options) {
+        
+         //est une entreprise ou pas ?
+        $builder->add('estUneEntreprise', ChoiceType::class, array(
+            'expanded' => true,
+            'multiple' => false,
+            'choices' => array(
+                'Particulier' => 'false',
+                'Entreprise' => 'true',
+            ),
+            'label'=>'Compte :',
+            'label_attr' => array(
+                'class' => 'radio-inline'
+            ),
+            'choices_as_values' => true,
+        ));
         //CIVILITE
         $builder->add('civilite', ChoiceType::class, array(
             'expanded' => true,
@@ -19,6 +35,7 @@ class RegistrationType extends AbstractType {
                 'Mr' => 'Mr',
                 'Mme' => 'Mme',
             ),
+            'label'=>'Civilité :',
             'label_attr' => array(
                 'class' => 'radio-inline'
             ),
@@ -32,6 +49,8 @@ class RegistrationType extends AbstractType {
         $builder->add('prenom', null, array(
             'attr' => array('placeholder' => 'Votre prénom')
         ));
+        
+        $builder->addEventSubscriber(new RegistrationListener());
     }
 
     public function getParent() {

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-4 aidu-fond-blanc">
+        </div>
+        <div class="col-md-4 aidu-fond-blanc">
+            {{ form_start(form) }}
+
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
+        </div>
+        <div class="col-md-4 aidu-fond-blanc">
+        </div>
+    </div>
+{% endblock%}

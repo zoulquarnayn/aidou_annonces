@@ -1,6 +1,6 @@
 
 {{ form_start(form) }}
-
+{{form_row(form.estUneEntreprise)}}
 {{form_row(form.civilite)}}
 
 <div class="row">
@@ -11,8 +11,10 @@
     {{form_row(form.plainPassword.first,{'attr':{'placeholder':'Choisissez un mot de passe'}})}}   
     {{form_row(form.plainPassword.second,{'attr':{'placeholder':'Confirmez votre mot de passe'}})}}   
    
-    <div>
+ <div>
         <input class="btn btn-success" type="submit" value="{{ 'registration.submit'|trans({}, 'messages') }}" />
-    </div>
+ </div>
+
  {{form_end(form)}}
+
 
